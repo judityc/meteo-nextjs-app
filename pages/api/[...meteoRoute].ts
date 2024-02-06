@@ -10,6 +10,7 @@ export default async function handler(
 
   if (typeof route === 'string') {
     res.status(400).json({ message: 'Invalid route' })
+    return
   }
 
   try {
