@@ -2,16 +2,13 @@
 
 import { Select } from "@chakra-ui/react";
 import { useCities } from "../hooks/useCities";
-import { useState } from "react";
 
-// interface Props {
-//   onSelectCity: (cityCode: string) => void;
-// }
+interface Props {
+  onSelectCity: (cityCode: string) => void;
+}
 
-const SelectCity = () => {
+const SelectCity = ({ onSelectCity}: Props) => {
   const { data: cities, error } = useCities();
-  const [city, setCity] = useState("vilnius");
-
 
   return (
     <>
@@ -22,7 +19,7 @@ const SelectCity = () => {
           placeholder="Select City"
           maxW="660px"
           size="lg"
-          onChange={(e) => setCity(e.target.value)}
+          onChange={(e) => onSelectCity(e.target.value)}
         >
           {cities?.map((city) => (
             <option key={city.code} value={city.code}>
