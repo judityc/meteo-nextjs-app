@@ -6,9 +6,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const route = req?.query?.meteoRoute?.join('/') 
+  const route = req?.query?.meteoRoute
+
+  if (typeof route === 'string') {
+    res.status(400).json({ message: 'Invalid route' })
+  }
+
   try {
-    const response = await fetch(`${METEO_API_BASE_URL}${route}`)
+    const response = await fetch(`${METEO_API_BASE_URL}${route.join('/')}`)
     const json = await response.json()
 
     if (response.status >= 400) {
