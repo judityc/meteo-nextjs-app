@@ -20,3 +20,7 @@ For styling components `Chakra UI` library was used.
 ## Why Next.js
 Due to `cors` issues with source API https://api.meteo.lt/v1/ project from Vite React was migrated to Next.js
 Backend part was covered in collaboration with Ramūnas Musteikis.
+
+## TODO
+- Use skeleton for table loading
+- Add suport for query params in url (use place code)
