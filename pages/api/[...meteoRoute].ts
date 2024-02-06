@@ -13,7 +13,8 @@ export default async function handler(
   }
 
   try {
-    const response = await fetch(`${METEO_API_BASE_URL}${route.join('/')}`)
+    const meteoRoute = route?.join('/') || ''
+    const response = await fetch(`${METEO_API_BASE_URL}${meteoRoute}`)
     const json = await response.json()
 
     if (response.status >= 400) {
