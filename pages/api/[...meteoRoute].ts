@@ -6,7 +6,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const route = req.query.meteoRoute.join('/') 
+  const route = req?.query?.meteoRoute?.join('/') 
   try {
     const response = await fetch(`${METEO_API_BASE_URL}${route}`)
     const json = await response.json()
