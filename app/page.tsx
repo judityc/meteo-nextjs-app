@@ -2,10 +2,10 @@
 
 import styles from "./page.module.css";
 import { Box, Heading } from "@chakra-ui/react";
-import SelectCity from "../../components/SelectCity";
+import SelectCity from "../components/SelectCity";
 import { useState } from "react";
-import DataTable from "../../components/DataTable";
-import { useCityForecast } from "../../hooks/useCityForecast";
+import DataTable from "../components/DataTable";
+import { useCityForecast } from "../hooks/useCityForecast";
 
 export default function Home() {
   const [city, setCity] = useState("vilnius");
