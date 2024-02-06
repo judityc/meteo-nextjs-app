@@ -1,6 +1,6 @@
 # meteo-nextjs-app
 
-#### Demo: https://jokes-app-peach.vercel.app/
+#### Demo: https://meteo-nextjs-app.vercel.app/
 
 ## Description:
 
