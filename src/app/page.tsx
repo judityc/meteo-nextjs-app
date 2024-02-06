@@ -14,7 +14,6 @@ export default function Home() {
 
 
   return (
-    <main className={styles.main}>
       <Box
       w="100%"
       display="flex"
@@ -26,6 +25,5 @@ export default function Home() {
       <SelectCity onSelectCity={(cityCode) => setCity(cityCode)}/>
       {error ? <Heading>{error}</Heading> : <DataTable data={cityForecast} />}
     </Box>
-    </main>
   );
 }
