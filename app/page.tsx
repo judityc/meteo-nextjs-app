@@ -20,11 +20,7 @@ export default function Home() {
           WEATHER APP
         </Heading>
         <SelectCity onSelectCity={(cityCode) => setCity(cityCode)} />
-        {error ? (
-          <Heading>{error}</Heading>
-        ) : (
-          <DataTable data={cityForecast} isLoading={isLoading} />
-        )}
+        <DataTable data={cityForecast} error={error} isLoading={isLoading} />
       </Box>
     </>
   );
