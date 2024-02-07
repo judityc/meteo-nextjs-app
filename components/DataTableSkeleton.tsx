@@ -7,13 +7,15 @@ import {
   Tbody,
   Skeleton,
   Td,
+  Tfoot,
 } from "@chakra-ui/react";
 
 const DataTableSkeleton = () => {
-  const skeletons = [0, 1, 2, 3, 4, 5, 7, 8, 9];
+  const skeletons = [0, 1, 2, 3, 4, 5, 7, 8, 9, 10];
 
   return (
-    <TableContainer maxWidth="1110px" height="621px">
+    <>
+    <TableContainer width="1110px" height="621px">
       <Table variant="simple">
         <Thead>
           <Tr>
@@ -55,6 +57,7 @@ const DataTableSkeleton = () => {
         </Tbody>
       </Table>
     </TableContainer>
+  </>
   );
 };
 

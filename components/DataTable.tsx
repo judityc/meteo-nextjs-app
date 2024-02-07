@@ -31,7 +31,7 @@ const DataTable = ({ data, isLoading }: Props) => {
       {isLoading ? (
         <DataTableSkeleton />
       ) : (
-        <TableContainer maxWidth="1110px" height="621px">
+        <TableContainer width="1110px" height="621px">
           <Table variant="simple">
             <Thead>
               <Tr>
