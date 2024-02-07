@@ -26,7 +26,6 @@ export default function Home() {
           <DataTable data={cityForecast} isLoading={isLoading} />
         )}
       </Box>
-      {/* <DataTableSkeleton /> */}
     </>
   );
 }
