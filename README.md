@@ -12,7 +12,7 @@
   
 ![Readme-img/app-select.png](https://github.com/judityc/meteo-nextjs-app/assets/123310773/7dedb715-2ef3-44b0-93fc-8ac6674ae047)
 
-- Mobile app version can also be used
+- The App could be used with query params: `BASE_URL?city_code=SELECTED_CITY_CODE`
 
 ## Technologies Used: 
 For styling components `Chakra UI` library was used. 
@@ -22,5 +22,5 @@ Due to `cors` issues with source API https://api.meteo.lt/v1/ project from Vite 
 Backend part was covered in collaboration with Ramūnas Musteikis.
 
 ## TODO
-- [X] Use skeleton for table loading
-- [X] Add suport for query params in url (use place code)
+- [X] ~Use skeleton for table loading~
+- [X] ~Add suport for query params in url (use place code)~
