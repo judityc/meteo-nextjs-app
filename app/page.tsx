@@ -6,19 +6,27 @@ import SelectCity from "../components/SelectCity";
 import { useState } from "react";
 import DataTable from "../components/DataTable";
 import { useCityForecast } from "../hooks/useCityForecast";
+import DataTableSkeleton from "../components/DataTableSkeleton";
 
 export default function Home() {
   const [city, setCity] = useState("vilnius");
 
-  const { data: cityForecast, error } = useCityForecast(city);
+  const { data: cityForecast, error, isLoading } = useCityForecast(city);
 
   return (
-    <Box className={styles.container}>
-      <Heading as="h2" size="2xl">
-        WEATHER APP
-      </Heading>
-      <SelectCity onSelectCity={(cityCode) => setCity(cityCode)} />
-      {error ? <Heading>{error}</Heading> : <DataTable data={cityForecast} />}
-    </Box>
+    <>
+      <Box className={styles.container}>
+        <Heading as="h2" size="2xl">
+          WEATHER APP
+        </Heading>
+        <SelectCity onSelectCity={(cityCode) => setCity(cityCode)} />
+        {error ? (
+          <Heading>{error}</Heading>
+        ) : (
+          <DataTable data={cityForecast} isLoading={isLoading} />
+        )}
+      </Box>
+      {/* <DataTableSkeleton /> */}
+    </>
   );
 }
