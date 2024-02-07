@@ -19,7 +19,7 @@ const DataTableSkeleton = () => {
       <Table variant="simple">
         <Thead>
           <Tr>
-            <Th>Date And Time</Th>
+            <Th width="213px">Date And Time</Th>
             <Th isNumeric>Temperature</Th>
             <Th isNumeric>Feel Temperature</Th>
             <Th isNumeric>Wind Speed</Th>
