@@ -22,5 +22,5 @@ Due to `cors` issues with source API https://api.meteo.lt/v1/ project from Vite 
 Backend part was covered in collaboration with Ramūnas Musteikis.
 
 ## TODO
-- Use skeleton for table loading
+- Use skeleton for table loading (DONE)
 - Add suport for query params in url (use place code)
